@@ -17,6 +17,10 @@ const ReactNativeBeaconEmitter = NativeModules.ReactNativeBeaconEmitter
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return ReactNativeBeaconEmitter.multiply(a, b);
+export function start(uuid: string, major: number, minor: number): void {
+  return ReactNativeBeaconEmitter.start(uuid, major, minor);
+}
+
+export function stop(): void {
+  return ReactNativeBeaconEmitter.stop();
 }
